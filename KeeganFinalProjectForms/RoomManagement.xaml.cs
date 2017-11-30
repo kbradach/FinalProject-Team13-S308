@@ -34,19 +34,27 @@ namespace KeeganFinalProjectForms
             string strPrice;
             double dblPrice;
             string strQuantity;
-            double dblQuantity;
+            int intQuantity;
+
+            //Clear Results
+            txbWarning.Text = "";
+            txtPrice.Background = Brushes.White;
+            txtQuantity.Background = Brushes.White;
+            cboRoomType.Background = Brushes.White;
 
             //2.Verify room type is selected
-            if (cboRoomType.SelectedItem.ToString().Equals("") )
+            if (!(cboRoomType.SelectedIndex > 0))
             {
-                
-                
+                cboRoomType.Background = Brushes.LightPink;
+                txbWarning.Text = "*Please select an option for room type";
+                return;
             }
+
             //3.Verify Price is a number
             if (!double.TryParse(txtPrice.Text, out dblPrice))
             {
                 txtPrice.Background = Brushes.LightPink;
-                txtPrice.Text = "*Please enter a number for price.";
+                txbWarning.Text = "*Please enter a number for price.";
                 return;
             }
 
@@ -55,23 +63,23 @@ namespace KeeganFinalProjectForms
             if (dblPrice < 0)
             {
                 txtPrice.Background = Brushes.LightPink;
-                txtPrice.Text = "*Please enter a non-negative price";
+                txbWarning.Text = "*Please enter a non-negative price";
                 return;
             }
 
             //5. Verify Quantity of rooms is a number
-            if (!double.TryParse(txtQuantity.Text, out dblQuantity))
+            if (Int32.TryParse(txtQuantity.Text, out intQuantity))
             {
                 txtQuantity.Background = Brushes.LightPink;
-                txtQuantity.Text = "*Please enter a number for room quantity.";
+                txbWarning.Text = "*Please enter a whole number for room quantity.";
                 return;
             }
 
             //6. Verify Quantity of rooms isnt negative
-            if (dblQuantity < 0)
+            if (intQuantity < 0)
             {
                 txtQuantity.Background = Brushes.LightPink;
-                txtQuantity.Text = "*Please enter a non-negative quantity";
+                txbWarning.Text.Text = "*Please enter a non-negative quantity";
                 return;
             }
         }
