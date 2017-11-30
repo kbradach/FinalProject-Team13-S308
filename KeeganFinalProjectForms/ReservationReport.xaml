@@ -1,0 +1,36 @@
+﻿<Window x:Class="KeeganFinalProjectForms.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeeganFinalProjectForms"
+        mc:Ignorable="d"
+        Title="Window1" Height="415" Width="415" Background="#FFB2DBBF">
+    <Grid Margin="0,0,2,0">
+
+        <Label x:Name="lblReservationReport" Content="Reservation Report" HorizontalAlignment="Left" Margin="9,10,0,0" VerticalAlignment="Top" Width="163" FontWeight="Bold" FontSize="13.333" Height="33" FontFamily="Century Gothic"/>
+        <TextBlock x:Name="txbReservationReportDescription" HorizontalAlignment="Left" Margin="9,43,0,0" TextWrapping="Wrap" Text="This window shows the reservations that have been made based on set parameters. Please enter either a check-in date range or last name. Room type is optional." VerticalAlignment="Top" Width="281" Height="59" FontFamily="Century Gothic"/>
+        <Button x:Name="btnSearch" Content="Search" HorizontalAlignment="Left" Margin="313,195,0,0" VerticalAlignment="Top" Width="55" Height="23" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" TabIndex="4" Click="btnSearch_Click"/>
+        <TextBlock x:Name="txbReportOutput" HorizontalAlignment="Left" Margin="9,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="98" Width="385" FontFamily="Century Gothic" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="True"><Run Text="Check-In Date: 11/10/17                  # of Nights: 1  "/><LineBreak/><Run Text="Room Type: "/><Run Text="Two Queen Deluxe      "/><Run Text="# of Rooms: 1   "/><LineBreak/><Run Text="Room Price: $125                               "/><Run Text="Total: $718.25   "/><LineBreak/><Run Text="First Name: Keegan                           Last Name: McCurry"/><LineBreak/><Run Text="Phone: 703-606-1908                         Email: kmccurry@indiana.edu"/></TextBlock>
+        <Button x:Name="btnReturn" Content="Main Menu" HorizontalAlignment="Left" Margin="313,342,0,0" VerticalAlignment="Top" Width="82" Height="23" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" TabIndex="5" Click="btnReturn_Click"/>
+        <DatePicker x:Name="datCheckInStart" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="135" FontFamily="Century Gothic" TabIndex="0" SelectedDate="2017-11-10"/>
+        <DatePicker x:Name="datCheckInEnd" HorizontalAlignment="Left" Margin="150,140,0,0" VerticalAlignment="Top" Width="140" FontFamily="Century Gothic" TabIndex="1" SelectedDate="2017-11-12"/>
+        <TextBox x:Name="txtLastNameInput" HorizontalAlignment="Left" Height="23" Margin="10,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" FontFamily="Century Gothic" Text="McCurry" TabIndex="2"/>
+        <Label x:Name="lblCheckInDateStart" Content="Check-in Date Start" HorizontalAlignment="Left" Margin="9,115,0,0" VerticalAlignment="Top" Width="136" FontFamily="Century Gothic"/>
+        <Label x:Name="lblCheckInDateEnd" Content="Check-in Date End" HorizontalAlignment="Left" Margin="150,115,0,0" VerticalAlignment="Top" Width="140" FontFamily="Century Gothic"/>
+        <Label x:Name="lblLastName" Content="Last Name" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Width="110" FontFamily="Century Gothic"/>
+        <ComboBox x:Name="cboRoomType" HorizontalAlignment="Left" Margin="150,195,0,0" VerticalAlignment="Top" Width="140" FontFamily="Century Gothic" Background="#FFDDDDDD" Foreground="Black" Height="23" TabIndex="3" SelectedIndex="0">
+            <ComboBoxItem Content="" Background="{x:Null}" Foreground="Black"/>
+            <ComboBoxItem Content="One King"/>
+            <ComboBoxItem Content="One King Delux" Background="{x:Null}" Foreground="Black"/>
+            <ComboBoxItem Content="Two Queens" Foreground="Black"/>
+            <ComboBoxItem Content="Two Queen Deluxe" Foreground="Black"/>
+            <ComboBoxItem Content="One King Suite" Foreground="Black"/>
+            <ComboBoxItem Content="One King Presidential Suite" Foreground="Black"/>
+        </ComboBox>
+        <Label x:Name="lblRoomType" Content="Room Type" HorizontalAlignment="Left" Margin="150,169,0,0" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic"/>
+        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="100" Margin="295,10,0,0" VerticalAlignment="Top" Width="100" Source="/Logo/SageHotelTransparent.png"/>
+        <DataGrid x:Name="dtgReportOutput" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" Height="22" Width="384"/>
+
+    </Grid>
+</Window>

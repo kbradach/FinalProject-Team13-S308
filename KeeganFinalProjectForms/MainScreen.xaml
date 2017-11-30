@@ -1,0 +1,23 @@
+﻿<Window x:Name="MainMenu" x:Class="KeeganFinalProjectForms.MainScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeeganFinalProjectForms"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="290" Width="500" Background="#FFB2DBBF">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblMainMenu" Content="Main Menu" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="154" FontWeight="Bold" FontSize="16" FontFamily="Century Gothic" Height="38"/>
+        <TextBlock x:Name="txbMainMenuDescription" HorizontalAlignment="Left" Margin="10,36,0,0" TextWrapping="Wrap" Text="Select an option." VerticalAlignment="Top" Width="144" Height="22" FontFamily="Century Gothic"/>
+        <Button x:Name="btnNewReservation" Content="New Reservation" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="122" Height="55" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" TabIndex="0" Click="btnNewReservation_Click"/>
+        <Button x:Name="btnRoomManagement" Content="Room Management" HorizontalAlignment="Left" Margin="170,90,0,0" VerticalAlignment="Top" Width="125" Height="55" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" TabIndex="1" Click="btnRoomManagement_Click"/>
+        <Button x:Name="btnReservationReport" Content="Reservation Report" HorizontalAlignment="Left" Margin="339,90,0,0" VerticalAlignment="Top" Width="125" Height="55" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" TabIndex="2" Click="btnReservationReport_Click"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="364,178,0,0" VerticalAlignment="Top" Width="100" Height="38" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" TabIndex="3" Click="btnExit_Click"/>
+        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="70" Margin="400,10,0,0" VerticalAlignment="Top" Width="82" Source="/Logo/SageHotelTransparent.png" RenderTransformOrigin="0.805,0.825"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="KeeganFinalProjectForms.RoomManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeeganFinalProjectForms"
+        mc:Ignorable="d"
+        Title="RoomManagement" Height="281.552" Width="500.621" Background="#FFB2DBBF">
+    <Grid HorizontalAlignment="Left" Width="491">
+
+        <Label x:Name="lblRoomManagement" Content="Room Management" HorizontalAlignment="Left" Margin="2,2,0,0" VerticalAlignment="Top" Width="213" FontWeight="Bold" FontSize="13.333" Height="27" FontFamily="Century Gothic"/>
+        <TextBlock x:Name="txbRoomManagementDescription" HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" Text="This window allows the changing of price and quantity for a certain room type. Please select a room type then the new price and or quantity, then select update. The updated details will be shown in the box." VerticalAlignment="Top" Width="324" Height="30" FontFamily="Century Gothic"/>
+        <TextBox x:Name="txtPrice" HorizontalAlignment="Left" Height="22" Margin="171,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Text="$179"/>
+        <TextBox x:Name="txtQuantity" HorizontalAlignment="Left" Height="22" Margin="332,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Text="30"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="355,185,0,0" VerticalAlignment="Top" Width="97" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" Click="btnUpdate_Click"/>
+        <Button x:Name="btnReturn" Content="Main Menu" HorizontalAlignment="Left" Margin="355,219,0,0" VerticalAlignment="Top" Width="97" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" Click="btnReturn_Click"/>
+        <Button x:Name="btnViewRoom" Content="View Room" HorizontalAlignment="Left" Margin="355,153,0,0" VerticalAlignment="Top" Width="97" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" Click="btnViewRoom_Click"/>
+        <Label x:Name="lblRoomType" Content="Room Type" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic"/>
+        <Label x:Name="lblPrice" Content="Price" HorizontalAlignment="Left" Margin="171,80,0,0" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic"/>
+        <Label x:Name="lblQuantity" Content="Quantity" HorizontalAlignment="Left" Margin="332,80,0,0" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic"/>
+        <ComboBox x:Name="cboRoomType" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="138" FontFamily="Century Gothic" Background="#FFDDDDDD" Foreground="Black" Height="23" SelectedIndex="0">
+            <ComboBoxItem Content=""/>
+            <ComboBoxItem Content="One King"/>
+            <ComboBoxItem Content="One King Deluxe"/>
+            <ComboBoxItem Content="Two Queens"/>
+            <ComboBoxItem Content="Two Queen Deluxe"/>
+            <ComboBoxItem Content="One King Suite"/>
+            <ComboBoxItem Content="One King Presidential Suite"/>
+        </ComboBox>
+        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="87" Margin="381,10,0,0" VerticalAlignment="Top" Width="100" Source="/Logo/SageHotelTransparent.png"/>
+        <DataGrid x:Name="dtgRoomMgmt" HorizontalAlignment="Left" Height="89" Margin="10,149,0,0" VerticalAlignment="Top" Width="340">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Type"/>
+                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Price"/>
+                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Quantity"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

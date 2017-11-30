@@ -1,0 +1,40 @@
+﻿<Window x:Class="KeeganFinalProjectForms.CreateQuote"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeeganFinalProjectForms"
+        mc:Ignorable="d"
+        Title="CreateQuote" Height="425" Width="525" Background="#FFB2DBBF">
+    <Grid>
+
+        <Label x:Name="lblCreateQuote" Content="Create Quote" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14.667" FontFamily="Century Gothic"/>
+        <ComboBox x:Name="cboRoomType" HorizontalAlignment="Left" Margin="112,123,0,0" VerticalAlignment="Top" Width="154" FontFamily="Century Gothic" Background="#FFDDDDDD" Foreground="Black" SelectedIndex="0" TabIndex="0">
+            <ComboBoxItem Content="" Foreground="Black"/>
+            <ComboBoxItem Content="One King"/>
+            <ComboBoxItem Content="One King Deluxe" Foreground="Black"/>
+            <ComboBoxItem Content="Two Queens" Foreground="Black"/>
+            <ComboBoxItem Content="Two Queen Deluxe" Foreground="Black"/>
+            <ComboBoxItem Content="One King Suite" Foreground="Black"/>
+            <ComboBoxItem Content="One King Presidential Suite" Foreground="Black"/>
+        </ComboBox>
+        <Label x:Name="lblRoomType" Content="Room Type:" HorizontalAlignment="Left" Margin="9,119,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+        <Label x:Name="lblNumRooms" Content="# of Rooms:" HorizontalAlignment="Left" Margin="287,119,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+        <TextBox x:Name="txtNumRooms" HorizontalAlignment="Left" Height="23" Margin="386,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" Text="1" TabIndex="1"/>
+        <Label x:Name="lblCheckInDate" Content="Check-in Date:" HorizontalAlignment="Left" Margin="10,158,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+        <DatePicker x:Name="datCheckIn" HorizontalAlignment="Left" Margin="112,159,0,0" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" SelectedDate="2017-11-10" TabIndex="2"/>
+        <Label x:Name="lblCheckOutDate" Content="Check-out Date:" HorizontalAlignment="Left" Margin="274,158,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+        <DatePicker x:Name="datCheckOutDate" HorizontalAlignment="Left" Margin="387,159,0,0" VerticalAlignment="Top" Width="120" FontFamily="Century Gothic" ScrollViewer.HorizontalScrollBarVisibility="Visible" SelectedDate="2017-11-11" DisplayDate="2017-11-15" Text="11/15/2017"/>
+        <TextBlock x:Name="txbWarning" HorizontalAlignment="Left" Height="38" Margin="9,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="363" FontFamily="Courier New"/>
+        <Label x:Name="lblQuoteResults" Content="Quote:" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontWeight="Bold"/>
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Margin="431,363,0,0" VerticalAlignment="Top" Width="75" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" TabIndex="7" Click="btnExit_Click"/>
+        <Button x:Name="btnCreateQuote" Content="Create Quote" HorizontalAlignment="Left" Margin="385,195,0,0" VerticalAlignment="Top" Width="114" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" TabIndex="3" Click="btnCreateQuote_Click"/>
+        <Button x:Name="btnReservation" Content="Create Reservation" HorizontalAlignment="Left" Margin="377,330,0,0" VerticalAlignment="Top" Width="128" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" Height="28" TabIndex="4" Click="btnReservation_Click"/>
+        <Button x:Name="btnMainMenu" Content="Main Menu" HorizontalAlignment="Left" Margin="220,363,0,0" VerticalAlignment="Top" Width="75" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" TabIndex="6" Click="btnMainMenu_Click"/>
+        <Button x:Name="btnStartOver" Content="Start Over" HorizontalAlignment="Left" Margin="10,363,0,0" VerticalAlignment="Top" Width="75" FontFamily="Century Gothic" Background="#FF2D98C5" Foreground="White" TabIndex="5" Click="btnStartOver_Click"/>
+        <TextBlock x:Name="txbCreateQuoteDescription" HorizontalAlignment="Left" Margin="9,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="417" Height="53" Text="Please enter desire room type, quantity of rooms, check-in date, and check-out date. Then select create quote. If satisfied with the quote proceed to create your reservation."/>
+        <Image x:Name="imgLogo" HorizontalAlignment="Left" Height="86" Margin="402,10,0,0" VerticalAlignment="Top" Width="105" Source="/Logo/SageHotelTransparent.png"/>
+        <DataGrid x:Name="dtgQuoteResults" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top" Height="94" Width="495"/>
+
+    </Grid>
+</Window>
